@@ -1,0 +1,348 @@
+/*Landing Page*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 5px 5px;
+    background-color: #fff;
+    color: #000;
+    border-bottom: 4px dotted #000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: left;
+    gap: 8px;
+}
+
+.logo-container img {
+    width: 70px;
+    height: 70px;
+}
+
+.logo-container h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+nav ul.active {
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+}
+
+nav a:hover {
+    color: #eb5b0c;
+}
+
+.hamburger {
+    cursor: pointer;
+    font-size: 24px;
+    color: black;
+}
+
+main {
+    display: grid;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.featured-article {
+    padding: 20px;
+    margin: 20px 0;
+    border: 2px solid #000;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.latest-news {
+    padding: 20px;
+    margin: 20px 0;
+    border: 2px solid #000;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.featured-article img,
+.latest-news img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #fff;
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+    border-top: #000;
+    background-color: #0071BB;
+}
+
+/*Article Page*/
+
+.article {
+    padding: 20px;
+    margin: 40px 0;
+    background-color: #fff;
+}
+
+.article-1 img {
+    width: auto;
+    max-width: 30%;
+    height: auto;
+    display: block;
+    margin: 5px 40px 40px 0;
+    float: left;
+}
+
+.article-2 img {
+    width: auto;
+    max-width: 30%;
+    height: auto;
+    display: block;
+    margin: 5px 40px 40px 0;
+    float: left;
+}
+
+.article-3 img {
+    width: auto;
+    max-width: 30%;
+    height: auto;
+    display: block;
+    margin: 5px 40px 40px 0;
+    float: left;
+}
+
+.article-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h2 {
+    color: #0071BB
+}
+
+.article-1 {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    border: 2px solid lightgrey;
+    border-radius: 8px;
+}
+
+.article-2 {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    border: 2px solid lightgrey;
+    border-radius: 8px;
+}
+
+.article-3 {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    border: 2px solid lightgrey;
+    border-radius: 8px;
+}
+
+/*AD*/
+
+.advertisement {
+    padding: 10px;
+    margin: 50px 0;
+    border: 2px solid #000;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #FEE88D;
+}
+
+/*Photo Gallery*/
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.photo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-gallery .photo img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-controls {
+    display: flex;
+    justify-content: context;
+    gap: 10px;
+    padding: 20px;
+}
+
+/*Hamburger Menu Style*/
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+/* slider */
+
+.slider-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    /* Full width */
+    max-width: 800px;
+    /* Optional max width */
+    margin: auto;
+    /* Center container */
+    overflow: hidden;
+    /* Hide overflow content */
+}
+
+.slides {
+    display: flex;
+    /* Use flexbox for sliding images */
+    transition: transform 0.5s ease;
+    /* Smooth transition */
+}
+
+.photo-gallery {
+    display: grid;
+    /* Keep the grid layout for the gallery */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Responsive grid */
+    gap: 20px;
+    /* Space between images in the grid */
+    padding: 0 20px;
+    /* Optional: Add space on the sides of the gallery */
+}
+
+.photo {
+    min-width: 100%;
+    /* Ensure each photo takes full width of the slider */
+}
+
+.photo img {
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    /* Make images responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+button.left,
+button.right {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    z-index: 10;
+    /* Bring buttons to the front */
+}
+
+button.left {
+    margin-right: 40px;
+    /* Spacing on the left button */
+}
+
+button.right {
+    margin-left: 40px;
+    /* Spacing on the right button */
+}
+
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    article img {
+        max-width: 90%;
+        margin: 10px auto;
+    }
+
+    .article-1 img,
+    .article-2 img {
+        max-width: 90%;
+    }
+
+    .featured-article img,
+    .latest-news img {
+        max-width: 80%;
+    }
+
+    .photo-gallery .photo img {
+        width: 100%;
+    }
+
+    .featured-article img,
+    .latest-news img {
+        max-width: 80%;
+        margin: 10px auto;
+    }
+}

@@ -1,0 +1,70 @@
+<!-- photo gallery -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>the miffy mix</h1>
+        <nav>
+            <div class="hamburger">☰</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="article.html">Article</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="photo-gallery">
+        <div class="slider-container">
+            <button class="left" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="slides">
+                <div class="photo"><img src="images/miffy teddy.jpg" alt="Miffy holding a teddy bear"></div>
+                <div class="photo"><img src="images/miffy n friends.jpg" alt="Miffy in a group with her friends"></div>
+                <div class="photo"><img src="images/miffy movie director.jpg" alt="Miffy as a movie director"></div>
+                <div class="photo"><img src="images/miffy reading.jpg" alt="Miffy holding a book"></div>
+            </div>
+            <button class="right" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contact us at themiffymix@email.com</p>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slides .photo');
+
+        function showSlide(index) {
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+
+            const slideWidth = slides[0].clientWidth; // Get width of a single slide
+            document.querySelector('.slides').style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+        }
+
+        function moveSlide(n) {
+            showSlide(currentSlide + n);
+        }
+
+        // Initialize the first slide display
+        showSlide(currentSlide);
+    </script>
+</body>
+
+</html>
